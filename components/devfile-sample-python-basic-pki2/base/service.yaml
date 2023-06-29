@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-python-basic-pki2
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-python-basic-pki2
+    app.kubernetes.io/part-of: load-app-c9788bb5-83db-4b8c-9707-1efbf8edd2e3
+  name: devfile-sample-python-basic-pki2
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-python-basic-pki2
+status:
+  loadBalancer: {}
